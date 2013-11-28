@@ -1,0 +1,10 @@
+%form{ :action => 'add', :method => 'post', :role => 'form'}
+  .form-group
+    %label{:for => 'site_name'} Site name:
+    %input{:type => 'text', :name => 'site_name'}
+
+  .form-group
+    %label{:for => 'password'} Password:
+    %input{:type => 'password', :name => 'password'}
+
+  %input{:type => 'submit', :value => 'Add', :class => 'btn btn-primary'}

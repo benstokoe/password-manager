@@ -1,0 +1,13 @@
+#action_bar
+  %a{:href => 'add', :class => 'btn btn-primary'}
+    Add Password
+
+%table.table
+  %thead
+    %th Site name
+    %th Password
+  %tbody
+    - locals[:sites].each do |site|
+      %tr
+        %td #{site[0]}
+        %td #{site[1]}
