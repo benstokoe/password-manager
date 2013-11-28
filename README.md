@@ -1,2 +1,4 @@
-password_manager
+Password Manager
 ================
+
+A simple password manager project.
