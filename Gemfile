@@ -1,0 +1,11 @@
+source 'https://rubygems.org'
+
+gem 'bundle'
+gem 'sinatra'
+gem 'sass'
+gem 'haml'
+gem 'cucumber'
+gem 'capybara'
+gem 'selenium-webdriver'
+gem 'rake'
+gem 'shotgun'
