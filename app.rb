@@ -23,11 +23,16 @@ register Sinatra::AssetPack
 
 assets {
 
-  css :styles, [
-      '/css/bootstrap/css/bootstrap.min.css',
-      '/css/flat-ui/css/flat-ui.css',
-      '/css/styles.css',
-  ]
+	css :styles, [
+		'/css/bootstrap/css/bootstrap.min.css',
+		'/css/flat-ui/css/flat-ui.css',
+		'/css/styles.css',
+	]
+	css :login, [
+		'/css/bootstrap/css/bootstrap.min.css',
+		'/css/flat-ui/css/flat-ui.css',
+		'/css/login.css',	
+	]
 
-  css_compression :sass
+	css_compression :sass
 }

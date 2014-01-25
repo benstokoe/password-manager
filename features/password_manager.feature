@@ -19,19 +19,19 @@ Feature: As a customer I want to be able to see my passwords in one place
     | name     | password |
     | Facebook | password |
 
-  Scenario Outline: Customer should be able to edit a password
+  # Scenario Outline: Customer should be able to edit a password
+  #   Given I am on the 'home' page
+  #   When I click 'edit_facebook' button
+  #   And I fill in the edit password information <password>
+  #   And I click 'Edit' button
+  #   Then I should see:
+  #     | thisismynewpassword |
+
+  # Examples:
+  #   | password            |
+  #   | thisismynewpassword |
+
+  Scenario: Customer should be able to delete a password
     Given I am on the 'home' page
-    When I click 'edit_facebook' button
-    And I fill in the edit password information <name> <password>
-    And I click 'Edit' button
-    Then I should see:
-      | Facebook | thisismynewpassword |
-
-  Examples:
-    | name     | password            |
-    | Facebook | thisismynewpassword |
-
-#  Scenario: Customer should be able to delete a password
-#    Given I am on the 'home' page
-#    When I click 'delete_facebook'
-#    Then I should not be able to see
+    When I click 'delete_facebook' button
+    Then I should not be able to see 'Facebook'

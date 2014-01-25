@@ -1,13 +1,23 @@
 #action_bar
   %a{:href => 'add', :class => 'btn btn-primary'}
+    %i.glyphicon.glyphicon-plus
     Add Password
 
 %table.table
   %thead
     %th Site name
     %th Password
+    %th{:colspan => "2"} Actions
   %tbody
     - locals[:sites].each do |site|
       %tr
         %td #{site[0]}
         %td #{site[1]}
+        %td
+          %a{:href => "edit/#{site[0].downcase.gsub(/\s+/, "")}", :id => "edit_#{site[0].downcase.gsub(/\s+/, "")}", :class => 'btn btn-primary'}
+            %i.glyphicon.glyphicon-pencil
+            Edit
+        %td
+          %a{:href => "delete/#{site[0].downcase.gsub(/\s+/, "")}", :id => "delete_#{site[0].downcase.gsub(/\s+/, "")}", :class => 'btn btn-primary'}
+            %i.glyphicon.glyphicon-remove
+            Delete

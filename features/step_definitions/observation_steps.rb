@@ -8,3 +8,7 @@ Then(/^I should see:$/) do |table|
     fail "Cannot find text: " + message unless page.has_content? message
   end
 end
+
+Then(/^I should not be able to see (.*)$/) do |text|
+  fail "Page has text: " + text if page.has_content? text
+end

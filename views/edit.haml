@@ -1,0 +1,12 @@
+%form{ :action => '../edit', :method => 'post', :role => 'form'}
+  .form-group
+    %p.form-control-static
+    Site name: #{locals[:site].capitalize}
+
+  %input{:type => 'hidden', :name => 'site_name', :id => 'site_name', :value => "#{locals[:site]}"}
+
+  .form-group
+    %label{:for => 'password'} Password:
+    %input{:type => 'password', :name => 'password', :id => 'password'}
+
+  %input{:type => 'submit', :value => 'Edit', :class => 'btn btn-primary'}

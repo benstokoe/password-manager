@@ -19,9 +19,20 @@ def get_all
   sites_array
 end
 
-def add_password(name, password)
+def add_password(_name, _password)
   settings.mongo_db['passwords'].insert({
-      name: name,
-      password: password
+      name: _name,
+      password: _password
   })
+end
+
+def update_password(_name, _password)
+  settings.mongo_db['passwords'].update(
+      {"name" => _name},
+      {"$set" => {"password" => _password}}
+  )
+end
+
+def delete_site
+  settings.mong
 end
