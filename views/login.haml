@@ -5,7 +5,20 @@
     %meta{'name' => 'viewport', :content => 'width=device-width'}
     %title Password Manager
     != css :login, :media => 'screen'
+    %script{:src => '//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'}
    
   %body
     #container
-   	  #users
+      #login
+        #users
+          %h1 Select a user
+          %a{:href => '/passwords'}
+            != img '/images/1.jpg'
+          %a{:href => '/passwords'}
+            != img '/images/2.jpg'
+          %a{:href => '/passwords'}
+            != img '/images/3.jpg'
+          %a{:href => '/passwords'}
+            != img '/images/4.jpg'
+          #plus
+            %i.glyphicon.glyphicon-plus
