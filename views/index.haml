@@ -2,6 +2,9 @@
   %a{:href => 'add', :class => 'btn btn-primary'}
     %i.glyphicon.glyphicon-plus
     Add Password
+  %a{:href => '#', :class => 'btn btn-primary', :id => 'logout'}
+    %i.glyphicon.glyphicon-user
+    Log Out
 
 %table.table
   %thead
@@ -14,9 +17,9 @@
         %td #{site[0]}
         %td #{site[1]}
         %td
-          %a{:href => "edit/#{site[0].downcase.gsub(/\s+/, "")}", :id => "edit_#{site[0].downcase.gsub(/\s+/, "")}", :class => 'btn btn-primary'}
+          %a{:href => "edit/#{site[0].downcase.gsub(/\s+/, "")}", :id => "edit_#{site[0].downcase.gsub(/\s+/, "")}", :class => 'btn btn-primary action', :id => 'edit'}
             %i.glyphicon.glyphicon-pencil
-            Edit  
-          %a{:href => "delete/#{site[0].downcase.gsub(/\s+/, "")}", :id => "delete_#{site[0].downcase.gsub(/\s+/, "")}", :class => 'btn btn-primary'}
+            %span Edit  
+          %a{:href => "delete/#{site[0].downcase.gsub(/\s+/, "")}", :id => "delete_#{site[0].downcase.gsub(/\s+/, "")}", :class => 'btn btn-primary action', :id => 'delete'}
             %i.glyphicon.glyphicon-remove
-            Delete
+            %span Delete

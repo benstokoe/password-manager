@@ -3,11 +3,26 @@
 +font-face("Lobster", font-files("lobster/Lobster.otf"))
 
 body
-  max-width: 960px
-  margin: 0 auto
+	max-width: 960px
+	margin: 0 auto
 
 h1
-  font-family: "Lobster", Georgia, Times, serif
+	font-weight: 100
 
 i
-  margin-right: 5px
+	margin-right: 5px
+
+#action_bar
+	margin-bottom: 10px
+
+@media screen and (max-width: 980px)
+	body
+		padding: 0 10px
+
+@media screen and (max-width: 518px)
+	h1
+		font-size: 50px
+
+@media screen and (max-width: 403px)
+	.action span
+		display: none
