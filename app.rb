@@ -8,7 +8,6 @@ require 'sinatra/assetpack'
 require 'sinatra/support'
 require 'sass'
 require 'compass'
-require 'mongo'
 
 
 register Sinatra::CompassSupport

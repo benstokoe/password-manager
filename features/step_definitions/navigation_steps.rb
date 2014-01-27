@@ -1,6 +1,6 @@
 When(/^I am on the '(.*)' page$/) do |page_name|
   if page_name == 'home'
-    visit '/'
+    visit '/passwords'
   end
 end
 When(/^I click '(.*)' button$/) do |button_text|

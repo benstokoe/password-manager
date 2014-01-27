@@ -15,7 +15,7 @@ end
 post '/add' do
   add_password(params[:site_name], params[:password])
 
-  redirect '/'
+  redirect '/passwords'
 end
 
 get '/edit/:site' do |site|
@@ -25,9 +25,11 @@ end
 post '/edit' do
   update_password(params[:site_name], params[:password])
 
-  redirect '/'
+  redirect '/passwords'
 end
 
-post '/delete/:site' do |site|
+get '/delete/:site' do |site|
 	delete_site(site)
+
+  redirect '/passwords'
 end	

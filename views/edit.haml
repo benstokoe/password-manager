@@ -1,7 +1,7 @@
 %form{ :action => '../edit', :method => 'post', :role => 'form'}
   .form-group
     %p.form-control-static
-    Site name: #{locals[:site].capitalize}
+    Site name: #{site}
 
   %input{:type => 'hidden', :name => 'site_name', :id => 'site_name', :value => "#{locals[:site]}"}
 
