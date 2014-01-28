@@ -1,7 +1,6 @@
 include Mongo
 
-configure do
-  #work out why i cant put the settings here
+before do
 end
 
 def get_all
@@ -35,6 +34,10 @@ def update_password(_name, _password)
   coll.update({"name" => _name}, {"$set" => {"password" => _password}})
 end
 
-def delete_site
-  settings.mongo.db['']
+def delete_site(_name)
+  client = MongoClient.new
+  db = client['password_manager']
+  coll = db['passwords']
+
+  coll.remove("name" => _name)
 end
