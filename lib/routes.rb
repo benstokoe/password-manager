@@ -13,9 +13,11 @@ get '/add' do
 end
 
 post '/add' do
-  add_password(params[:site_name], params[:password])
-
-  redirect '/passwords'
+  if add_password(params[:site_name], params[:password])
+    redirect '/passwords'
+  else
+    haml :errors, :locals => {:error => 'This site already exists'}
+  end
 end
 
 get '/edit/:site' do |site|

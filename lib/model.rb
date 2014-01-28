@@ -23,7 +23,12 @@ def add_password(_name, _password)
   db = client['password_manager']
   coll = db['passwords']
 
-  coll.insert({ name: _name, password: _password })
+  if coll.find_one(:name => _name)
+    false
+  else
+    coll.insert({ name: _name, password: _password })
+    true
+  end
 end
 
 def update_password(_name, _password)
@@ -31,7 +36,7 @@ def update_password(_name, _password)
   db = client['password_manager']
   coll = db['passwords']
 
-  coll.update({"name" => _name}, {"$set" => {"password" => _password}})
+  coll.update({:name => _name}, {"$set" => {:password => _password}})
 end
 
 def delete_site(_name)
@@ -39,5 +44,5 @@ def delete_site(_name)
   db = client['password_manager']
   coll = db['passwords']
 
-  coll.remove("name" => _name)
+  coll.remove(:name => _name)
 end
