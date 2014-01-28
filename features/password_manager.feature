@@ -7,7 +7,27 @@ Feature: As a customer I want to be able to see my passwords in one place
     And I click 'Add' button
     Then I should see:
       | Facebook | password |
+  Examples:
+    | name     | password |
+    | Facebook | password |
 
+  # @wip
+  # Scenario Outline: Customer will see the new password highlighted and on screen
+  #   Given I am on the 'home' page
+  #   When I click 'Add Password' button
+  #   And I fill in the add password information <name> <password>
+  #   And I click 'Add' button
+  #   Then I should see the <name> row highlighted  
+  #   Examples:
+  #   | name | password |
+  #   | eBay | password |
+
+  Scenario Outline: User should not be able to add site that already exists
+    Given I am on the 'home' page
+    When I click 'Add Password' button
+    And I fill in the add password information <name> <password>
+    And I click 'Add' button
+    Then I should see an error message 'duplicate site'
   Examples:
     | name     | password |
     | Facebook | password |
@@ -19,14 +39,11 @@ Feature: As a customer I want to be able to see my passwords in one place
     And I click 'Edit' button
     Then I should see:
       | thisismynewpassword |
-
   Examples:
     | password            |
     | thisismynewpassword |
 
-  # Scenario: Customer will see the edited password highlighted and on screen
-
-  Scenario: Customer should be able to delete a password
+  Scenario: Customer should be able to delete a passwords
     Given I am on the 'home' page
     When I click 'delete_facebook' button
     Then I should not be able to see 'Facebook'

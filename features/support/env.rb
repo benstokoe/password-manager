@@ -1,4 +1,5 @@
 require 'capybara/cucumber'
+require 'rspec/expectations'
 require 'selenium-webdriver'
 
 #Capybara.app = true
