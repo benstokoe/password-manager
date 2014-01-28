@@ -12,7 +12,7 @@ Given(/^'(.*)' does not already exist$/) do |site|
 	end
 end
 
-Given(/^'(.*)' does already exist$/) do |site|
+Given(/^'(.*)' already exists$/) do |site|
 	if not coll.find_one(:name => site)
 		coll.insert({:name => site, :password => 'password'})
 
