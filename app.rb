@@ -9,6 +9,8 @@ require 'sinatra/support'
 require 'sass'
 require 'compass'
 
+enable :sessions
+set :session_secret, "password_manager"
 
 register Sinatra::CompassSupport
 c = Compass.configuration
