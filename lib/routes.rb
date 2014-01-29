@@ -3,8 +3,9 @@ get '/' do
 end
 
 get '/passwords' do
-  sites_array = get_all
+  authorised?
 
+  sites_array = get_all
   haml :index, :locals => {:sites => sites_array}
 end
 
@@ -37,5 +38,6 @@ get '/delete/:site' do |site|
 end	
 
 get '/logout' do
+  logout
   redirect '/'
 end

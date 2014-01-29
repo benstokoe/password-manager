@@ -2,6 +2,7 @@ $LOAD_PATH.unshift File.expand_path('lib')
 require 'sinatra'
 require 'mongo'
 require 'model'
+require 'user_auth'
 require 'routes'
 require 'haml'
 require 'sinatra/assetpack'
