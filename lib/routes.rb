@@ -35,3 +35,7 @@ get '/delete/:site' do |site|
 
   redirect '/passwords'
 end	
+
+get '/logout' do
+  redirect '/'
+end
