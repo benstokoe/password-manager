@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %meta{'charset' => 'utf-8'}
+    %meta{'name' => 'viewport', :content => 'width=device-width'}
+    %title Password Manager
+    != css :login, :media => 'screen'
+   
+  %body
+    #container
+      #login
+        #users
+          %h1 Log In
+          != img '/images/2.jpg'
+          %form{:action => '/login', :method => 'post', :role => 'form'}
+            .form-group
+              %label{:for => 'username'} Username:
+              %input{:type => 'text', :name => 'username', :class => 'text'}
+            .form-group
+              %label{:for => 'password'} Password:
+              %input{:type => 'password', :name => 'password', :class => 'text'}
+            %input{:type => "submit", :value => "Log In", :class => "btn btn-success"}

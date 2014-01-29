@@ -2,6 +2,10 @@ get '/' do
 	haml :login, :layout => false
 end
 
+get '/login' do
+  haml :loginform, :layout => false
+end
+
 get '/passwords' do
   authorised?
 
