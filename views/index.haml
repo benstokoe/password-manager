@@ -12,7 +12,7 @@
     %th Password
     %th{:colspan => "2"} Actions
   %tbody
-    - locals[:sites].each do |site|
+    - sites.each do |site|
       %tr
         %td #{site[0]}
         %td #{site[1]}
